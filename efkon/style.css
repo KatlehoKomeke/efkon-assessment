@@ -1,0 +1,231 @@
+body
+{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, rgba(255,255,255,1) 0%, rgba(255,66,66,1) 100%);
+}
+input:focus
+{
+    outline-color: rgba(255,0,0,0.01);
+}
+#logo
+{
+    position: absolute;
+    top: 3.5vh;
+    left: 4vh;
+    width: 5vw;
+    height: 5vh;
+}
+#head
+{
+    position: absolute;
+    top: 4vh;
+    left: 20vw;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    user-select: none;
+}
+#sign-in
+{
+    border-bottom: 0.5vh solid red;
+}
+#right
+{
+    position: absolute;
+    display: none;
+    top: 1vh;
+    right: 4vw;
+    user-select: none;
+}
+#rightBottom
+{
+    position: absolute;
+    display: none;
+    bottom: 9vh;
+    right: 4vw;
+    user-select: none;
+}
+#box
+{
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    width: 50vw;
+    height: 75vh;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3vw;
+    display: grid;
+    place-items: center;
+}
+#sign-in-box
+{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+#sign-up-box
+{
+    display: none;
+    place-items: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+#sign-in-box .input
+{
+    width: 80%;
+    height: 30%;
+    border-radius: 2vw;
+    background-color: rgba(255,255,255,0.3);
+    border-style: none;
+    text-align: center;
+    font-size: 3vh;
+}
+#sign-up-box .input
+{
+    width: 80%;
+    height: 50%;
+    border-radius: 2vw;
+    background-color: rgba(255,255,255,0.3);
+    border-style: none;
+    text-align: center;
+    font-size: 3vh;
+}
+#sign-in-box .submit
+{
+    width: 50%;
+    height: 30%;
+    border-radius: 2vw;
+    background-color: rgba(255,0,0,0.5);
+    border-style: none;
+    text-align: center;
+    font-size: 3vh;
+}
+.inputUpdate
+{
+    display: none;
+    height: 6vh;
+    border-radius: 2vw;
+    background-color: rgba(255,255,255,0.3);
+    border-style: none;
+    text-align: center;
+    font-size: 3vh;
+}
+.inputYear
+{
+    height: 6vh;
+    border-radius: 2vw;
+    background-color: rgba(255,255,255,0.3);
+    border-style: none;
+    text-align: center;
+    font-size: 3vh;
+}
+#sign-up-box .submit
+{
+    width: 50%;
+    height: 50%;
+    border-radius: 2vw;
+    background-color: rgba(255,0,0,0.5);
+    border-style: none;
+    text-align: center;
+    font-size: 3vh;
+}
+#table 
+{
+    position: absolute;
+    top: 10vh;
+    left: 15vw;
+	width:70vw;
+    display: none;
+    font-size: 4vh;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3vw;
+}
+.table-row 
+{
+	display:flex;
+    left: 5%;
+	width:90%;
+	padding: 2%;
+    user-select: none;
+
+}
+.table-data-one
+{
+	flex: 1;
+	text-align:center;
+}
+.table-data-two
+{
+	flex: 1;
+	text-align:center;
+}
+#trio
+{
+    display: none;
+    flex-direction: column;
+    place-items: center;
+    height: 6vh;
+}
+#sub-trio
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.splitTextAndGenderButton
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+hr
+{
+    width:80%; 
+    border: 0.1vh solid rgba(255,0,0,0.1);
+}
+#img
+{
+    position: absolute;
+    bottom: 3vh;
+    left: 47.5vw;
+    width: 3vw;
+    height: 5vh;
+    display: none;
+}
+#datePicker
+{
+    display: none;
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
+	width:80vw;
+    height: 50vh;
+    display: none;
+    font-size: 4vh;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3vw;
+    place-items: center; 
+}
+#yearAlignment
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 90%;
+    left: 5%;
+    column-gap: 1.5vw;
+    text-align: center;
+}
+.yearNum
+{
+    width: 100%;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
