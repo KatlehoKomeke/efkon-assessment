@@ -61,7 +61,7 @@ document.getElementById("submitSignIn").addEventListener("click",function(event)
         xhr.send(formData);
     }else
     {
-        console.error("empty string and characters are not allowed");
+        console.error("invalid input");
     }
 });
 // post sign up information
@@ -425,7 +425,7 @@ document.getElementById("updateToMale").addEventListener('click', function(event
         document.getElementById("updateToFemale").checked = false; 
         document.getElementById("updateToNA").checked = false; 
         const gender = "male";
-        updateDetails(type,gender);
+        updateDetails("Gender",gender);
     }
 });
 // updating to female once sign-in
@@ -436,7 +436,7 @@ document.getElementById("updateToFemale").addEventListener('click', function(eve
         document.getElementById("updateToMale").checked = false; 
         document.getElementById("updateToNA").checked = false; 
         const gender = "female";
-        updateDetails(type,gender);
+        updateDetails("Gender",gender);
     }
 });
 // updating to n/a once sign-in
@@ -447,6 +447,6 @@ document.getElementById("updateToNA").addEventListener('click', function(event)
         document.getElementById("updateToFemale").checked = false; 
         document.getElementById("updateToMale").checked = false; 
         const gender = "n/a";
-        updateDetails(type,gender);
+        updateDetails("Gender",gender);
     }
 });
