@@ -1,19 +1,16 @@
 <?php
-    // storing all the POST data
-    $name = $_POST['name'];
-    $surname = $_POST['surname'];
-    $gender = $_POST['gender'];
-    $email = $_POST['email'];
-    $contact = $_POST['contact'];
-    $password = $_POST['password'];  
     // checking if variables are set 
-    if(isset($email) && !empty($email) && isset($password) && !empty($password))
+    if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']))
     {      
       // connecting to the database
-      $connection = $connection = mysqli_connect('database server', 'user', 'password', 'name of database');
+      $connection = mysqli_connect('server name', 'user', 'password', 'database name');
       // preventing sql injections
-      mysqli_real_escape_string($connection , $email);
-      mysqli_real_escape_string($connection , $password);
+      $name = mysqli_real_escape_string($connection , $_POST['name']);
+      $surname = mysqli_real_escape_string($connection , $_POST['surname']);
+      $gender = mysqli_real_escape_string($connection , $_POST['gender']);
+      $email = mysqli_real_escape_string($connection , $_POST['email']);
+      $contact = mysqli_real_escape_string($connection , $_POST['contact']);
+      $password = mysqli_real_escape_string($connection , $_POST['password']);
       // writing data to the table
       mysqli_query($connection , "INSERT INTO User (Name,Surname,Gender,Email,Contact_Number,Password) VALUES('".$name."','".$surname."','".$gender."','".$email."','".$contact."','".$password."');");
       // getting the matching user's details

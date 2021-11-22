@@ -1,17 +1,14 @@
 <?php
-    // storing all the POST data
-    $email = $_POST['email'];
-    $password = $_POST['password'];  
     // checking if variables are set 
-    if(isset($email) && !empty($email) && isset($password) && !empty($password))
+    if(isset( $_POST['email']) && !empty( $_POST['email']) && isset($_POST['password']) && !empty($_POST['password']))
     { 
       // connecting to the database
-      $connection = $connection = mysqli_connect('database server', 'user', 'password', 'name of database');
+      $connection = mysqli_connect('server name', 'user', 'password', 'database name');
       // preventing sql injections
-      mysqli_real_escape_string($connection , $email);
-      mysqli_real_escape_string($connection , $password);
+      $email = mysqli_real_escape_string($connection , $_POST['email']);
+      $password = mysqli_real_escape_string($connection , $_POST['password']);
       // updating data of the table
-      mysqli_query($connection , "UPDATE User SET ".$_POST['type']." ='".$_POST['value']."' WHERE email='".$email."' AND password='".$password."' LIMIT 1;");
+      mysqli_query($connection , "UPDATE User SET ".$_POST['type']." = '".$_POST['value']."' WHERE email='".$email."' AND password='".$password."' LIMIT 1;");
       // getting the matching user's details
       $resultFromUsers = mysqli_query($connection , "SELECT * FROM User WHERE email='".$email."' AND password='".$password."' LIMIT 1;");
       // validating that the query was succesful
